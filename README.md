@@ -31,8 +31,8 @@ Run the following commands in a terminal:
   ```
 
 ## Screenshots
-![screenshot1](screenshot/screenshot1.png) 
+![screenshot1](my-app/screenshots/screenshot1.png) 
 
-![screenshot2](screenshot/screenshots2.png)
+![screenshot2](my-app/screenshots/screenshots2.png)
 
-![screenshot3](screenshot/screenshots3.png)
+![screenshot3](my-app/screenshots/screenshots3.png)
