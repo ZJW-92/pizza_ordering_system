@@ -1,6 +1,6 @@
-# pizza_ordering_system
+# Welcome to pizzaria! 
 
-## A exercise of ordering pizza online.
+## An exercise of ordering pizza online.
 
 ## Technologies used 
  - Javasript
