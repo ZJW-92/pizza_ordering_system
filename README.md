@@ -35,3 +35,6 @@ Run the following commands in a terminal:
 
 ![screenshot2](my-app/screenshots/screenshot2.png) 
 
+![screenshot3](my-app/screenshots/screenshot3.png) 
+
+
