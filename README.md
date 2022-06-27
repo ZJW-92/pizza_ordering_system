@@ -12,9 +12,9 @@
 
 ## Functionality
 - Login and Registration
-- Pizza browsing: names, prices, quantity and adding to the cart 
+- Pizza browsing: browse pizzas, prices, quantity and adding to the cart 
 - Cart browsing: add or remove pizzas and generate orders.
-- Submit order and payment
+- Submit orders 
 
 ## Setup
 Run the following commands in a terminal: 
