@@ -33,6 +33,5 @@ Run the following commands in a terminal:
 ## Screenshots
 ![screenshot1](my-app/screenshots/screenshot1.png) 
 
-![screenshot2](my-app/screenshots/screenshots2.png)
+![screenshot2](my-app/screenshots/screenshot2.png) 
 
-![screenshot3](my-app/screenshots/screenshots3.png)
