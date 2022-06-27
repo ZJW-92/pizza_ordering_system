@@ -1,0 +1,76 @@
+<template>
+  <el-container class="login-register-main">
+    <el-form label-width="50px" @submit.native.prevent>   <!--Enter submit form-->
+      <el-row class="login-title" type="flex" justify="center">
+        <el-col :sapn="24"><img src="../assets/icon.png" /></el-col>
+      </el-row>
+      <el-form-item label="Namn">
+        <el-input type="email" v-model="user.account" placeholder="Användarnamn" required="required"></el-input>
+      </el-form-item>
+      <el-form-item label="Lösenord">
+        <el-input type="password" v-model="user.password" placeholder="Lösenord" required="required"></el-input>
+      </el-form-item>
+      <el-form-item class="submit-btn">
+        <button @click="login">Logga in</button>
+      </el-form-item>
+    </el-form>
+  </el-container>
+</template>
+
+<script>
+    export default {
+        name: "Login",
+      data(){
+          return {
+            user:{
+              account: '',
+              password:''
+            },
+          }
+      },
+      methods:{
+        login(){
+          this.axios.get('/users.json')
+            .then(response=>{
+              let users = [];
+              for (let key in response.data){
+                users.push(response.data[key])
+              }
+              /*使用过滤器来匹配用户输入的账号和密码是否已经注册*/
+              let result = users.filter((user)=>{   //若匹配成功返回一个符合条件的数组，若匹配失败返回空数组
+                return this.user.account === user.account && this.user.password === user.password
+              });
+              if (result !=null && result.length >0){     //返回数组不为空且长度大于0，说明账号密码正确
+                this.$message({type:'info',message:'登录成功'});
+                this.$store.dispatch('login',result[0].account);    //向vuex传递用户名
+                this.$router.push('/');      //登录成功后跳转首页
+                // location.reload();
+              } else {    //否则提示错误
+                this.$alert('Användarnamn eller lösenord är fel.',{
+                  type:'error',
+                  callback:action=>{}
+                })
+              }
+            });
+        }
+      },
+      /*导航守卫，只要跳转至本页面 用户登录信息就会被清空*/
+      beforeRouteEnter:(to,from,next)=>{
+          next(vm=>{
+            vm.$store.dispatch('logout',false);
+          })
+      }
+    }
+</script>
+
+<style scoped lang="less">
+  .login-title{
+    img{
+      width: 100px;
+      height: auto;
+    }
+  }
+  .el-form-item{
+    margin-left: -20px;
+  }
+</style>
