@@ -31,3 +31,8 @@ Run the following commands in a terminal:
   ```
 
 ## Screenshots
+![screenshot1](screenshot/screenshot1.png) 
+
+![screenshot2](screenshot/screenshots2.png)
+
+![screenshot3](screenshot/screenshots3.png)
