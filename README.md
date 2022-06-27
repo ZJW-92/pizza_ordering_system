@@ -7,14 +7,19 @@
  - Html
  - CSS
  - Vue2.0
+ - Vue-cli
  - Element UI
+ - Webpack
+ - Axios 
+ 
 
 
 ## Functionality
 - Login and Registration
-- Pizza browsing: browse pizzas, prices, quantity and adding to the cart 
-- Cart browsing: add or remove pizzas and generate orders.
+- Pizza browsing: browse pizzas, prices, quantity and add to the cart 
+- Cart browsing: add or remove pizzas, see total price and generate orders
 - Submit orders 
+- Admin page: add more pizzas, edit existing pizzas' prices and save  
 
 ## Setup
 Run the following commands in a terminal: 
